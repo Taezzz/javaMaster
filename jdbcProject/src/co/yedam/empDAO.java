@@ -32,6 +32,7 @@ public class empDAO {
 		getConn();
 		List<Employee> list = new ArrayList<>();
 		String sql = "select * from emp order by emp_no";
+		
 		try {
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
