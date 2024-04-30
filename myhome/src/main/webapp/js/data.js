@@ -11,10 +11,7 @@ const members = [
 // 배열 for.
 // for(let mem of members){}
 	
-	members.forEach(function(item, idx, ary){
-		if(item.memberPoint>=95){
-			console.log(item, idx, ary)
-		}
-	})
+
+	
 	
 	

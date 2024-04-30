@@ -3,7 +3,8 @@
 */
 // 추가 클릭이벤트 등록.
 	 document.querySelector('#addMember').addEventListener('click', addMemberFnc); 
-		
+	 document.querySelector('#editMember').addEventListener('click', editrow); 
+
 		function addMemberFnc(){
 						
 		let memberNo = document.querySelector('#memberNo').value;
@@ -83,7 +84,20 @@
 			})
 		})		
 		
+		// 수정
 		
+		
+		
+		
+		function editrow(){
+			let memberNo = document.querySelector('#memberNo').value;
+			let memberName = document.querySelector('#memberName').value;  
+			let memberPoint = document.querySelector('#memberPoint').value;
+			
+			if(memberNo == 'table#tlist tbody td.innerText'){
+				
+			}
+		}
 		
 		
 		
