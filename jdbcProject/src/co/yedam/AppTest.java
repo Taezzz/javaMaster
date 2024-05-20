@@ -20,7 +20,6 @@ public class AppTest {
 			e.printStackTrace();
 			return;
 		}
-		Connection conn = DriverManager.getConnection(url, "jsp", "jsp");
 		try {
 			Connection conn = DriverManager.getConnection(url, "jsp", "jsp");
 			
