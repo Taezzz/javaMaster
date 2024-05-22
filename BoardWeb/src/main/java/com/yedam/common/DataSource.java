@@ -8,8 +8,10 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class DataSource {
-
-	// SqlSessionFactory 반환.
+	
+	private DataSource() {}
+	private static SqlSessionFactory sqlSessionFactory;
+	
 	public static SqlSessionFactory getInstance() {
 		String resource = "config/mybatis-config.xml";
 		InputStream inputStream = null;
@@ -18,9 +20,8 @@ public class DataSource {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		SqlSessionFactory sqlSessionFactory = //
-				new SqlSessionFactoryBuilder().build(inputStream);
-
+		sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+		
 		return sqlSessionFactory;
 	}
 }

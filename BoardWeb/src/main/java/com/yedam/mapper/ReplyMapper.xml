@@ -78,7 +78,8 @@
 		phone_number,address,center_type)
 		<foreach collection="array" item="center" open=" select "
 			separator=" from dual union all select " close=" from dual">
-			#{center.id}, #{center.centerName}, #{center.sido}, #{center.phoneNumber},
+			#{center.id},
+			#{center.centerName}, #{center.sido}, #{center.phoneNumber},
 			#{center.address}, #{center.centerType}
 		</foreach>
 	</insert>

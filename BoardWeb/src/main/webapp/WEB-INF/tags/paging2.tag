@@ -8,16 +8,16 @@
 
     <c:if test="${pageInfo.prev }">
       <!-- 이전페이지 여부. -->
-      <a href="main.do?searchCondition=${searchCondition }&keyword=${keyword }&page=${pageInfo.startPage-1 }">&laquo;</a>
+      <a href="productList.do?searchCondition=${searchCondition }&keyword=${keyword }&page=${pageInfo.startPage-1 }">&laquo;</a>
     </c:if>
 
     <c:forEach var="p" begin="${pageInfo.startPage }" end="${pageInfo.endPage }">
-      <a href="main.do?searchCondition=${searchCondition }&keyword=${keyword }&page=${p }" class="${p == pageInfo.page ? 'active' : '' }">${p }</a>
+      <a href="productList.do?searchCondition=${searchCondition }&keyword=${keyword }&page=${p }" class="${p == pageInfo.page ? 'active' : '' }">${p }</a>
     </c:forEach>
 
     <c:if test="${pageInfo.next }">
       <!-- 이후페이지 여부. -->
-      <a href="main.do?searchCondition=${searchCondition }&keyword=${keyword }&page=${pageInfo.endPage+1 }">&raquo;</a>
+      <a href="productList.do?searchCondition=${searchCondition }&keyword=${keyword }&page=${pageInfo.endPage+1 }">&raquo;</a>
     </c:if>
 
   </div>  
